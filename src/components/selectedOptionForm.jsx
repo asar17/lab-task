@@ -100,10 +100,14 @@ console.log('calender start end day',calender)
                                 { costItem === 'الي' || costItem === 'من' ? 
                                    (
                                     <>
+                                    
+                                    {/* <DatePicker defaultValue={new Date()} value={calender} inputIcon={'one'}  onChange={(e)=>{setDate(e,costItem);} }/> */}
+
                                     <svg  onClick={()=>setDatePicker(!datePicker)} className=" absolute w-4 h-4  text-gray-500 dark:text-gray-400 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                                     </svg>
-                                    {datePicker && <DatePicker  style={{width:'10px',height:'17px',marginTop:'-7px',marginRight:'-47px',backgroundColor:'gray',position:'absolute'}} value={calender}  onChange={(e)=>{setDate(e,costItem);} }/>}
+                                    {datePicker && <div className="max-sm:w-60 max-sm:ml-10  md:w-28 md:ml-9 lg:w-28 xl:w-40 lg:ml-9  absolute xl:ml-10 rounded-xl"><DatePicker   style={{backgroundColor:'white',width:'100%',height:'100%'}} value={calender}  onChange={(e)=>{setDate(e,costItem);} }/></div>}
+                                    {datePicker && <p className=" absolute max-sm:ml-24 md:ml-11 lg:ml-12 xl:ml-16 max-sm:text-[.7rem] md:text-[.6rem] lg:text-[.55rem] xl:text-[.7rem] ">click  to choose date</p>}
 
                                     </>
                                     
@@ -115,7 +119,7 @@ console.log('calender start end day',calender)
                         )
                         )}
              </form>
-             
+             {/* onClick={()=>setDatePicker(!datePicker)} */}
                {/* <CostTable cost={cost} className="hidden"/> */}
              
         </>

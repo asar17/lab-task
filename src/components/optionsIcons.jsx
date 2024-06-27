@@ -1,6 +1,6 @@
 import{ RemoveIcon, UndoIcon, LockIcon}from '../../utilies/icons'
 const OptionIcons = () => {
-    const CreateOptionIcon = ({className,optionIconName, child }) => {
+    const CreateOptionIcon = ({className,optionIconName, child,select }) => {
       return(
         <div className={className}>
            {optionIconName}
@@ -10,7 +10,7 @@ const OptionIcons = () => {
 
     }
     return(
-        <div className="flex  md:gap-2 lg:gap-4 relative  max-md:mt-4 max-sm:flex-1 md:mt-6 max-sm:items-center max-sm:justify-between">
+        <div className="flex  md:gap-2 lg:gap-4 relative  max-md:mt-4 max-sm:flex-1 md:mt-6 max-sm:items-center max-sm:justify-between ">
             <CreateOptionIcon 
               className="relative  bg-red-500 rounded-md max-sm:w-10 max-sm:h-10 max-sm:mt-2 md:w-8 md:h-8 md:mt-2 lg:w-9 lg:h-9 lg:mt-3   flex justify-center items-center"
               optionIconName={<RemoveIcon/>}

@@ -8,7 +8,7 @@ import {useTheme} from './contextApi'
 const CostTable = () =>{
    const [cost,setCost]=useTheme().cost;
    const [selectedMonth,setSelectedMonth]=useTheme().selectedMonth;
-   let initialTable= Array.from({length: 11}, () => selectedMonth.reduce((month)=>month));
+   let initialTable= Array.from({length: 12}, () => selectedMonth.reduce((month)=>month));
   
 useEffect(()=>{
   setCost(cost)

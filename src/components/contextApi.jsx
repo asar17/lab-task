@@ -4,7 +4,8 @@ import { createContext, useContext, useState } from 'react';
 const ThemeContext= createContext();
 
 export const ThemeProvider = ({children}) =>{
-    const [count22, setCount22]=useState(0)
+    const [count22, setCount22]=useState(0);
+    const [refresh,setRefresh]=useState("please refresh page befour the first render");
     const [cost, setCost ] =useState([
         {
             "Cost - Weekday":"00.00",
@@ -25,6 +26,7 @@ export const ThemeProvider = ({children}) =>{
         }
     ]);
     const [datePicker,setDatePicker]=useState(false)
+  
     
     return(
         <ThemeContext.Provider 
@@ -32,7 +34,10 @@ export const ThemeProvider = ({children}) =>{
             cost:[cost, setCost], 
             datePicker:[datePicker,setDatePicker],
             selectedMonth:[selectedMonth,setSelectedMonth],
-            count:[count22,setCount22]
+            count:[count22,setCount22],
+            refresh:[refresh,setRefresh],
+         
+           
            }}
         >
             {children}
